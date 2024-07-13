@@ -1,0 +1,793 @@
+part 1 summary
+-----------------------
+Short Summary for [Build and Deploy a LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase | Part 1](https://www.youtube.com/watch?v=igqiduZR-Gg) by [Merlin](https://merlin.foyer.work/)
+
+ "Building a LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase | Part 1"
+
+[00:03](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3) Building a LeetCode clone application using React, Next.js, TypeScript, Tailwind CSS, and Firebase.
+
+[02:29](https://www.youtube.com/watch?v=igqiduZR-Gg&t=149) Solving problems, fetching code solutions, sending fetch request
+
+[07:07](https://www.youtube.com/watch?v=igqiduZR-Gg&t=427) Configuring Tailwind CSS for the project
+
+[09:36](https://www.youtube.com/watch?v=igqiduZR-Gg&t=576) Adding essential HTML tags for the application and creating the Navbar component.
+
+[14:13](https://www.youtube.com/watch?v=igqiduZR-Gg&t=853) Styling the navigation bar with Tailwind CSS classes
+
+[16:49](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1009) Styling adjustments to avoid flickering effect and smooth animations.
+
+[21:03](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1263) Adding React icons for better UI elements
+
+[23:08](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1388) Adding classes for styling elements
+
+[27:53](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1673) Creating login page layout with various classes and elements
+
+[30:00](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1800) Updating authentication interface for user registration
+
+[34:22](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2062) Installing and setting up Recoil in the application
+
+[36:20](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2180) Using recoil root and atom state for managing components and hooks
+
+[40:41](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2441) Implementing handle click function for different actions
+
+[43:01](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2581) Implementing a custom hook for handling modal closures
+
+[47:16](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2836) Setting up Firebase and initializing the project
+
+[49:25](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2965) Setting up Firebase Configuration and Services
+
+[53:49](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3229) Creating a handleChange function to update specific input values
+
+[55:52](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3352) Implement user registration functionality with email and password using Firebase auth
+
+[1:00:01](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3601) Setting up error handling and form validation for user registration
+
+[1:02:02](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3722) Setting up form inputs and submission handling in React.
+
+[1:06:08](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3968) Implementing conditional rendering based on user authentication status.
+
+[1:08:11](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4091) Setting up the home page layout and components
+
+[1:12:18](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4338) Creating a Problems Table component to display mock data
+
+[1:14:28](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4468) Styling elements based on odd/even indexes
+
+[1:18:51](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4731) Adding solution tab with conditional rendering
+
+[1:21:03](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4863) Building the solution tab for the YouTube video icons.
+
+[1:25:15](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5115) Implementing conditional rendering based on user interaction
+
+[1:27:17](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5237) Implementing functionality to open and close video model
+
+[1:31:22](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5482) Creating and styling user profile image and email display
+
+[1:33:25](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5605) Creating reusable component for logout button.
+
+[1:37:27](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5847) Enable opening authentication model on sign-in click
+
+[1:39:46](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5986) Setting up form submission and password reset functionality with React and Firebase.
+
+[1:44:10](https://www.youtube.com/watch?v=igqiduZR-Gg&t=6250) Implementing custom toast notifications in the project
+
+[1:46:34](https://www.youtube.com/watch?v=igqiduZR-Gg&t=6394) Setting up the problem page for LeetCode Clone.
+
+---------------------------------
+
+Detailed Summary for [Build and Deploy a LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase | Part 1](https://www.youtube.com/watch?v=igqiduZR-Gg) by [Merlin](https://merlin.foyer.work/)
+
+ "Building a LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase | Part 1"
+
+[00:03](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3) Building a LeetCode clone application using React, Next.js, TypeScript, Tailwind CSS, and Firebase.
+- Utilizing TypeScript for easy debugging with types and interfaces.
+- Integrating Firebase for authentication and database functionalities.
+
+[02:29](https://www.youtube.com/watch?v=igqiduZR-Gg&t=149) Solving problems, fetching code solutions, sending fetch request
+- It fetches code solution from local storage when problem is already solved.
+- Sends a fetch request to Firebase Firestore for database update.
+
+[07:07](https://www.youtube.com/watch?v=igqiduZR-Gg&t=427) Configuring Tailwind CSS for the project
+- Copying and pasting configuration into Tailwind config.js file
+- Pasting base components and utilities into global.css file for Tailwind CSS
+
+[09:36](https://www.youtube.com/watch?v=igqiduZR-Gg&t=576) Adding essential HTML tags for the application and creating the Navbar component.
+- Adding title, file icon, viewport, and description tags in the head tag.
+- Creating a 'components' folder, adding a 'navbar.tsx' file, and setting up authentication page.
+
+[14:13](https://www.youtube.com/watch?v=igqiduZR-Gg&t=853) Styling the navigation bar with Tailwind CSS classes
+- Setting class names and styles for the logo image and navigation button
+- Using Tailwind config.js to set specific colors and hover effects
+
+[16:49](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1009) Styling adjustments to avoid flickering effect and smooth animations.
+- Set border color to transparent for hover effect.
+- Add transition duration of 300 milliseconds with ease-in-out for smoother animation.
+
+[21:03](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1263) Adding React icons for better UI elements
+- Install react icons using npm to enhance user interface with icons
+- Copy specific icons from GitHub and import them into the project for customization
+
+[23:08](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1388) Adding classes for styling elements
+- Classes defined for various elements like headings, labels, inputs
+- Styling details such as border, outline, padding, text color specified
+
+[27:53](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1673) Creating login page layout with various classes and elements
+- Adding specific class names for different styling and layout purposes
+- Implementing div and anchor tags with appropriate classes for design and functionality
+
+[30:00](https://www.youtube.com/watch?v=igqiduZR-Gg&t=1800) Updating authentication interface for user registration
+- Changing login to sign up and dynamically updating fields
+- Modifying input fields and buttons for registration process
+
+[34:22](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2062) Installing and setting up Recoil in the application
+- Using npm to install Recoil and setting up the initial state
+- Creating atoms and initializing the first item in the source folder
+
+[36:20](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2180) Using recoil root and atom state for managing components and hooks
+- Importing recoil root from recoil to use recoil components and hooks
+- Using useRecoilValue to access the value from the state and conditionally rendering components
+
+[40:41](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2441) Implementing handle click function for different actions
+- Initializing the handle click function to set up the click action
+- Using the handle click function to send different types for various interactions
+
+[43:01](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2581) Implementing a custom hook for handling modal closures
+- Creating a custom hook called useCloseModel with Recoil state initialization
+- Defining a function closeModel to set isOpen to false in use effect
+
+[47:16](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2836) Setting up Firebase and initializing the project
+- Creating a project on firebase.google.com and initializing the Firebase app for the LeetCode Clone
+- Explaining the purpose and benefits of using Firebase for backend services
+
+[49:25](https://www.youtube.com/watch?v=igqiduZR-Gg&t=2965) Setting up Firebase Configuration and Services
+- Creating a Firebase folder and file for configuration
+- Importing authentication and Firestore services for the application
+
+[53:49](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3229) Creating a handleChange function to update specific input values
+- Defining a function const handleChangeInput to update input values based on their name
+- Implementing onSubmit handler to call the handleRegister function and prevent page refresh
+
+[55:52](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3352) Implement user registration functionality with email and password using Firebase auth
+- Configure Firebase authentication in the project and initialize authentication service
+- Implement registration logic by creating a function to handle registration with email and password, following Firebase documentation
+
+[1:00:01](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3601) Setting up error handling and form validation for user registration
+- Using useEffect to monitor changes in 'error' state and alerting the user if there is an error message
+- Implementing form validation to ensure all required fields are filled before allowing user registration
+
+[1:02:02](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3722) Setting up form inputs and submission handling in React.
+- Create states for email and password inputs.
+- Implement input change handling, form submission, and user authentication flow.
+
+[1:06:08](https://www.youtube.com/watch?v=igqiduZR-Gg&t=3968) Implementing conditional rendering based on user authentication status.
+- Utilizing useEffect hook to check if the user is logged in and navigating to the respective pages accordingly.
+- Introducing a state variable 'page loading' to control the rendering based on the user's authentication status.
+
+[1:08:11](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4091) Setting up the home page layout and components
+- Creating the top bar with buttons, logo, title, and problem table
+- Integration with Firestore to store and fetch data
+
+[1:12:18](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4338) Creating a Problems Table component to display mock data
+- Adding the table body with appropriate classes and styling
+- Mapping through the mock data array to display each problem in a table row
+
+[1:14:28](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4468) Styling elements based on odd/even indexes
+- Using conditional logic to style elements as per index status (odd or even)
+- Setting up classes for background color and transparency based on conditions
+
+[1:18:51](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4731) Adding solution tab with conditional rendering
+- Implementing conditional rendering based on video solutions existence
+- Using React Icons for displaying solution status
+
+[1:21:03](https://www.youtube.com/watch?v=igqiduZR-Gg&t=4863) Building the solution tab for the YouTube video icons.
+- Handling the 404 error for the problem page.
+- Setting the font size to 20 28 for improved visibility.
+
+[1:25:15](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5115) Implementing conditional rendering based on user interaction
+- Setting up state using useState hook to control the visibility of the YouTube player
+- Using conditional rendering to display the YouTube player based on the state
+
+[1:27:17](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5237) Implementing functionality to open and close video model
+- Setting YouTube player to open and passing video ID when clicking the icon
+- Adding functionality to close the model by setting YouTube player open to false and clearing video ID
+
+[1:31:22](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5482) Creating and styling user profile image and email display
+- Explaining the use of 'group' from Tailwind CSS for relative positioning and styling
+- Adding and styling the user profile image and email display, including classes and hover effects
+
+[1:33:25](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5605) Creating reusable component for logout button.
+- Creating a separate folder for buttons inside components.
+- Creating a logout button component with necessary styling and icon.
+
+[1:37:27](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5847) Enable opening authentication model on sign-in click
+- Mutate the oauth model state to ensure model opens on sign-in
+- Implement the functionality to send password reset emails
+
+[1:39:46](https://www.youtube.com/watch?v=igqiduZR-Gg&t=5986) Setting up form submission and password reset functionality with React and Firebase.
+- Using state and handling input changes and form submissions.
+- Implementing error handling for password reset and email notifications.
+
+[1:44:10](https://www.youtube.com/watch?v=igqiduZR-Gg&t=6250) Implementing custom toast notifications in the project
+- Adding toast container and importing it from React-testing-library along with CSS styling for customization
+- Configuring toast options like position, auto close duration, and theme for a better user experience
+
+[1:46:34](https://www.youtube.com/watch?v=igqiduZR-Gg&t=6394) Setting up the problem page for LeetCode Clone.
+- Designing and implementing the problem page with server-side loading and various components.
+- Including description, examples, constraints, code editor, test cases, font size changer, full screen mode, timer, code submission, and reset options.
+
+---------------------------------------------------------------------------------------------------------------------------
+
+part2 summary:
+-----
+Short Summary for [Build and Deploy a LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase | Part 2](https://www.youtube.com/watch?v=cSYDnjOTlQk) by [Merlin](https://merlin.foyer.work/)
+
+ "Building LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase - Part 2 | As a Programmer"
+
+[00:03](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3) Setting up Firestore database for fetching data
+
+[02:24](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=144) Utilizing Firebase for authentication and state management with Recoil
+
+[07:33](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=453) Implementing a different layout for the problem page
+
+[10:01](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=601) Designing interactive user interface elements
+
+[15:12](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=912) Managing state for the timer display and conditional rendering based on show timer value.
+
+[17:40](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1060) Implementing timer component with dynamic logic
+
+[22:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1339) Implementing logic to reset timer and show timer functionality.
+
+[24:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1485) Using React Split for creating containers
+
+[29:23](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1763) Styling the page layout with horizontal gutter and background image
+
+[31:29](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1889) Setting up problem details and data
+
+[36:12](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2172) Customizing font size, margin, padding, and color in the code representation.
+
+[38:34](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2314) Creating preference navbar for playground
+
+[43:17](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2597) Creating reusable components with custom class names in Tailwind CSS
+
+[45:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2736) Creating custom class names with Tailwind CSS and setting up layout for code editor and test cases
+
+[49:52](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2992) Setting up initial UI components and test cases
+
+[52:13](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3133) Adding test cases in the LeetCode clone app
+
+[56:54](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3414) Styling cases one, two, and three with specific CSS properties.
+
+[59:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3559) Styling and structuring input and output sections
+
+[1:03:55](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3835) Summary of UI components and customizations
+
+[1:06:14](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3974) Implementing and rendering problems for the user to solve.
+
+[1:10:44](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4244) Dynamic data stored differently for problem statements and examples.
+
+[1:12:54](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4374) Setting up local problems data and working on the database
+
+[1:17:30](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4650) Copying and rendering HTML paragraphs
+
+[1:19:41](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4781) Handling errors and logic for test cases
+
+[1:24:34](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5074) Setting up the problem data structure for a new LeetCode problem.
+
+[1:26:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5210) Implementing a reverse linked list in JavaScript with test cases
+
+[1:31:27](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5487) Import images, add new problems and set up boilerplate code for each problem
+
+[1:33:53](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5633) Using Static Site Generation for pre-generating pages on the server
+
+[1:38:25](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5905) Creating an interface for problem mapping
+
+[1:40:42](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6042) Understanding fallback and getStaticProps functions
+
+[1:45:32](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6332) Setting up problem description section
+
+[1:47:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6470) Implementing problem data structure for LeetCode clone
+
+[1:52:25](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6745) Associating problem IDs with the URL in PID page
+
+[1:54:35](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6875) Fixing styling issues and preparing boilerplate code for the problem solution
+
+[1:59:09](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7149) Dynamically change test cases based on user interaction
+
+[2:01:14](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7274) Dynamic test case indicator for users
+
+[2:05:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7545) Firestore is structured like MongoDB, a document-based database
+
+[2:07:51](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7671) Creating input fields for problem details in the form
+
+[2:12:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7939) Setting up input change event and handling form data submission
+
+[2:14:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8076) Firebase Firestore methods usage for data manipulation
+
+[2:19:17](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8357) Adding problems to the Firestore database and accessing them in the demo application.
+
+[2:21:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8496) Adding LeetCode problems with details to database
+
+[2:25:53](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8753) Implement loading skeletons and looping through components
+
+[2:28:02](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8882) Updating state based on problem loading status
+
+[2:32:30](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9150) Ordering data from Firestore collection in ascending order
+
+[2:34:44](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9284) Accessing and manipulating data from Firestore using queries
+
+[2:39:21](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9561) Creating a new type for database problems
+
+[2:41:41](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9701) Implementing problem links in the LeetCode clone
+
+[2:46:10](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9970) Adding data to Firestore using set method
+
+[2:48:22](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10102) Implementing user-friendly toast notifications for account creation and error handling
+
+[2:52:52](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10372) Fetching like and dislike count from database using custom hook.
+
+[2:55:02](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10502) Setting loading and difficulty class for fetching data from Firebase
+
+[2:59:23](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10763) Setting problem difficulty classes based on ID
+
+[3:01:49](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10909) Rendering dynamic difficulty classes based on problem types
+
+[3:06:35](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11195) Implementing like and dislike functionality with data handling for LeetCode clone.
+
+[3:08:49](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11329) Setting up data fetching logic and initial state
+
+[3:13:30](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11610) Managing user data and state in the component
+
+[3:15:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11750) Implementing like and dislike functionality for the problem
+
+[3:20:28](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12028) Implementing like and dislike functionality with user states
+
+[3:22:40](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12160) Handling like functionality with Firebase transactions
+
+[3:26:49](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12409) Read and manipulate data from Firestore transaction
+
+[3:29:10](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12550) Updating likes count in database and UI
+
+[3:33:42](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12822) Incrementing like count and updating UI for liked problems
+
+[3:35:58](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12958) Implement loading animation based on update status
+
+[3:40:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13219) Creating and implementing the dislike functionality using async function.
+
+[3:42:21](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13341) Creating an async function to handle transactions and return user and problem documents
+
+[3:46:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13605) Implementing like and dislike functionality with real-time updates.
+
+[3:48:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13730) Implementing UI update on like functionality
+
+[3:53:16](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13996) Updating UI based on user actions in Firebase
+
+[3:55:41](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14141) Handling hydration error and updating UI with Firebase data.
+
+[3:59:44](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14384) Using next/router to access query parameters and manipulate data
+
+[4:02:00](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14520) Handle navigation between problems
+
+[4:06:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14796) Understanding and handling hydration errors in React
+
+[4:08:58](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14938) Implementing code submission and adding confetti animation
+
+[4:13:39](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15219) Setting success stage and creating functions for handling submit and on change
+
+[4:15:57](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15357) Handling user code submission and error handling
+
+[4:20:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15636) Implement function callback for testing success
+
+[4:23:01](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15781) Implementing error handling in the application
+
+[4:27:52](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16072) Updating user reference and handling hydration error for solved problems
+
+[4:30:09](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16209) Implementing a solved state to show a check mark upon successful submission.
+
+[4:34:43](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16483) Handling user authentication and local storage for user codes.
+
+[4:37:13](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16633) Converting user code to a function and explaining the starter function name
+
+[4:41:53](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16913) Handling full screen functionality and resolving errors
+
+[4:44:22](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17062) Implementing full screen functionality in React project
+
+[4:49:08](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17348) Implementing setting model component logic with conditional rendering.
+
+[4:51:17](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17477) Implementing a drop-down menu with font size options
+
+[4:56:05](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17765) Creating a function to handle click drop down
+
+[4:58:20](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17900) Using local storage hook in Next JS with TypeScript
+
+[5:02:57](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18177) Implementing dynamic font size based on user selection
+
+[5:05:13](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18313) Setting and fetching data from local storage and database
+
+[5:09:56](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18596) Implement code submission security with sandboxing
+
+[5:12:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18739) Importance of sandboxing in code execution
+
+[5:16:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=19005) Update Firebase database rules for security
+
+[5:19:27](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=19167) Implementing read permissions for users in database rule
+
+---------------------------------
+
+Detailed Summary for [Build and Deploy a LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase | Part 2](https://www.youtube.com/watch?v=cSYDnjOTlQk) by [Merlin](https://merlin.foyer.work/)
+
+ "Building LeetCode Clone with React: Next JS, TypeScript, Tailwind CSS, Firebase - Part 2 | As a Programmer"
+
+[00:03](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3) Setting up Firestore database for fetching data
+- Initialized project with Next.js and TypeScript configurations, and added Tailwind CSS with color customization
+- Configured Firebase project and replaced configuration with environmental variables for local data usage
+
+[02:24](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=144) Utilizing Firebase for authentication and state management with Recoil
+- Implementation of Firebase authentication for quicker and easier authentication logic
+- Utilizing Recoil for global state and management, simplifying the process compared to React Redux or context
+
+[07:33](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=453) Implementing a different layout for the problem page
+- The problem page has a problem list that goes backwards and forwards and a clock icon on the right.
+- The layout differs from the home page with a space between top bar elements and conditional rendering based on the problem page prop.
+
+[10:01](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=601) Designing interactive user interface elements
+- Creating a clickable element with specific dimensions and cursor pointer
+- Implementing icons and links for navigation
+
+[15:12](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=912) Managing state for the timer display and conditional rendering based on show timer value.
+- Setting up state for show timer to control the visibility of the timer display.
+- Implementing conditional rendering using show timer state to render different components based on its value.
+
+[17:40](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1060) Implementing timer component with dynamic logic
+- Configuring timer component with clock icon functionality and small div container layout
+- Enhancing productivity by leveraging external tool for code generation
+
+[22:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1339) Implementing logic to reset timer and show timer functionality.
+- Implemented a function to reset timer and update show timer status on click.
+- Ensured timer starts from zero after resetting show timer.
+
+[24:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1485) Using React Split for creating containers
+- React Split allows for building horizontal and vertical containers
+- Includes code examples with React and can be imported using npm
+
+[29:23](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1763) Styling the page layout with horizontal gutter and background image
+- Horizontal gutter provides spacing and background image gives square dots effect
+- Instructions on styling with additional classes and deleting unnecessary module.css
+
+[31:29](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=1889) Setting up problem details and data
+- Describing the problem details such as title, category, likes, and start status
+- Inserting the data as hardcoded for now and planning to make it dynamic in future sections
+
+[36:12](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2172) Customizing font size, margin, padding, and color in the code representation.
+- Details about changing font size, color, and styling for input, output, and explanations.
+- Introduction to constraints presented in an unordered list with specific styling options.
+
+[38:34](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2314) Creating preference navbar for playground
+- Importing the component and saving it
+- Adding classes and elements for the navbar
+
+[43:17](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2597) Creating reusable components with custom class names in Tailwind CSS
+- Cutting out repeated code by creating components with custom class names for buttons and tooltips
+- Avoiding the use of 'apply' with group utility in Tailwind CSS to resolve issues
+
+[45:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2736) Creating custom class names with Tailwind CSS and setting up layout for code editor and test cases
+- Instead of using repetitive class lines, we can create our own class names with Tailwind CSS by pasting them into the apply layer.
+- We are setting up the layout for code editor and test cases using split.js in vertical direction with specific classes for code editor.
+
+[49:52](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=2992) Setting up initial UI components and test cases
+- Importing necessary packages and defining props
+- Resolving development errors and testing components
+
+[52:13](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3133) Adding test cases in the LeetCode clone app
+- Creating a test case container with specific class names for styling
+- Adding headings, wrappers, and style classes for the test cases
+
+[56:54](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3414) Styling cases one, two, and three with specific CSS properties.
+- Setting classes and specific styling properties for case one, including font size, text alignment, transitions, background color changes, etc.
+- Repeating the process for cases two and three, ensuring uniform styling across all cases.
+
+[59:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3559) Styling and structuring input and output sections
+- Incorporated styling like class names, sizes, colors, and paddings for the input section.
+- Replicated the styling for the output section, including specific class names and target values.
+
+[1:03:55](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3835) Summary of UI components and customizations
+- UI elements include preference navbar, settings, full-screen buttons, language support, and code mirror.
+- Leveraging packages like CodeMirror, JavaScript language support, and different themes for customization.
+
+[1:06:14](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=3974) Implementing and rendering problems for the user to solve.
+- Adding the problems and rendering them on the page.
+- Setting up the boilerplate code to guide user input.
+
+[1:10:44](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4244) Dynamic data stored differently for problem statements and examples.
+- Problem statements are stored locally for immediate rendering.
+- Handler function evaluates user's code correctness for testing.
+
+[1:12:54](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4374) Setting up local problems data and working on the database
+- Create a 'problems' folder in the 'utils' directory to store problem data
+- Import and use 'insert' package for comparing user code and check correctness
+
+[1:17:30](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4650) Copying and rendering HTML paragraphs
+- Instructions on copying and pasting HTML paragraphs for the problem statement and constraints.
+- Creating and referencing the starter code in JavaScript for the problem.
+
+[1:19:41](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=4781) Handling errors and logic for test cases
+- Catching and logging errors with try-catch
+- Implementing test case logic with nums array, targets, and answers
+
+[1:24:34](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5074) Setting up the problem data structure for a new LeetCode problem.
+- Creating a new folder for the problem and defining the problem type.
+- Importing the problem type and setting up the problem data structure.
+
+[1:26:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5210) Implementing a reverse linked list in JavaScript with test cases
+- Explanation on creating linked list class to emulate a linked list in JavaScript
+- Procedure of creating and comparing linked list values with test cases
+
+[1:31:27](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5487) Import images, add new problems and set up boilerplate code for each problem
+- Import images from the images folder to use as examples for the problems
+- Add new problems like Jump game and Valid parentheses, each with problem statement, examples, and handler functions
+
+[1:33:53](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5633) Using Static Site Generation for pre-generating pages on the server
+- Static Site Generation helps in rendering pages immediately, reducing loading time
+- The getStaticPaths function in Next.js helps in pre-generating dynamic routes on the server
+
+[1:38:25](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=5905) Creating an interface for problem mapping
+- Defining the problem map interface with keys and values as problem types
+- Generating static paths and pre-generating pages for each route key
+
+[1:40:42](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6042) Understanding fallback and getStaticProps functions
+- Fallback means returning a 404 error for non pre-generated URLs
+- getStaticProps function fetches data based on the URL
+
+[1:45:32](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6332) Setting up problem description section
+- Creating a component to display problem description using props
+- Defining structure for problem title, difficulty, and problem statement
+
+[1:47:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6470) Implementing problem data structure for LeetCode clone
+- Define prop name for the problem in HTML tag
+- Ensure problem title and statement are structured properly
+
+[1:52:25](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6745) Associating problem IDs with the URL in PID page
+- The PID from the URL is associated with the problems object in the index page
+- Constraints are added to the list items
+
+[1:54:35](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=6875) Fixing styling issues and preparing boilerplate code for the problem solution
+- Adjusting margin and padding values to improve spacing in the UI
+- Implementing the boilerplate code for the problem solution in the code editor
+
+[1:59:09](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7149) Dynamically change test cases based on user interaction
+- Initialize test case with a default value of zero when user first accesses the page
+- Implement an onClick function to update the active test case index and display the corresponding input and output
+
+[2:01:14](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7274) Dynamic test case indicator for users
+- Using active state to change text color based on test case
+- Enhancing user experience by indicating currently active test case
+
+[2:05:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7545) Firestore is structured like MongoDB, a document-based database
+- Firestore uses collections and documents similar to MongoDB's structure
+- We can manually start a collection and add fields, but this method is slow and not user-friendly
+
+[2:07:51](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7671) Creating input fields for problem details in the form
+- Input fields include problem ID, title, difficulty, category, video ID, link, and order
+- Fields added for proper structuring and ordering of displayed problems on the homepage
+
+[2:12:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=7939) Setting up input change event and handling form data submission
+- Adding onchange event handler to form inputs and updating state
+- Submitting form data to Firestore database using Firebase
+
+[2:14:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8076) Firebase Firestore methods usage for data manipulation
+- Explaining usage of set document method and add document method for data manipulation in Firebase Firestore
+- Details on handling form submission with Firestore methods and data conversion
+
+[2:19:17](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8357) Adding problems to the Firestore database and accessing them in the demo application.
+- Demonstration of adding a problem to the database and accessing it in the demo application with its details.
+- Overview of the process of adding multiple problems to the database and accessing them in the application.
+
+[2:21:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8496) Adding LeetCode problems with details to database
+- Assign category, difficulty, and order to problems
+- Include video ID, link, and other details for each problem
+
+[2:25:53](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8753) Implement loading skeletons and looping through components
+- Render loading skeletons based on loading state
+- Loop through components to render multiple loading skeletons
+
+[2:28:02](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=8882) Updating state based on problem loading status
+- Set loading state if problems are not loading to show specific content area.
+- Implement logic to manage loading state and fetching problems in ProblemsTable component.
+
+[2:32:30](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9150) Ordering data from Firestore collection in ascending order
+- Setting up a query to choose a collection and ordering the data by a specific field
+- Utilizing Firebase's 'order by' function for ordering data in ascending order
+
+[2:34:44](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9284) Accessing and manipulating data from Firestore using queries
+- Using query snapshot to access and filter data from Firestore
+- Creating a temporary array to store only the required data fields from the documents
+
+[2:39:21](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9561) Creating a new type for database problems
+- Introduced a new type 'DB Problem' for storing data like ID, title, category, etc.
+- Defined the structure of 'DB Problem' type with various fields like video ID, difficulty, likes, dislikes, etc.
+
+[2:41:41](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9701) Implementing problem links in the LeetCode clone
+- Adding problem links to navigate to specific problems on click
+- Setting up conditional rendering based on the presence of problem links
+
+[2:46:10](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=9970) Adding data to Firestore using set method
+- Setting up Firestore database and importing necessary modules.
+- Creating a new document with user data and necessary fields.
+
+[2:48:22](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10102) Implementing user-friendly toast notifications for account creation and error handling
+- Utilizing toast.loading to display a message while creating an account with specified position and ID
+- Utilizing toast.error to display error message at the top center while handling errors
+
+[2:52:52](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10372) Fetching like and dislike count from database using custom hook.
+- Using a custom hook 'useGetCurrentProblem' to fetch current problem data based on the problem ID.
+- Implementing data fetching logic using 'useEffect' and managing state with 'useState'.
+
+[2:55:02](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10502) Setting loading and difficulty class for fetching data from Firebase
+- Loading state is initially set to true and a problem difficulty class is initialized to an empty string.
+- The process of fetching data from Firebase is discussed, including using the document method and checking for the existence of the document.
+
+[2:59:23](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10763) Setting problem difficulty classes based on ID
+- Using ID from document snap to set problem ID
+- Updating problem difficulty class based on difficulty level
+
+[3:01:49](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=10909) Rendering dynamic difficulty classes based on problem types
+- Implemented dynamic rendering of problem difficulty classes based on likes/dislikes
+- Displayed different colored difficulty classes based on problem type: easy, medium, and hard
+
+[3:06:35](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11195) Implementing like and dislike functionality with data handling for LeetCode clone.
+- Creating logic to determine if a user has already liked or disliked a problem for updating UI accordingly.
+- Implementing a hook named 'useGetUsersDataOnProblem' to retrieve user's data based on problem ID.
+
+[3:08:49](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11329) Setting up data fetching logic and initial state
+- Integrating hooks and setting up data fetching logic on Mount
+- Initializing state for user data and building user reference function
+
+[3:13:30](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11610) Managing user data and state in the component
+- The function checks if user is available and performs actions accordingly
+- Function is triggered on unmount to reset data to initial state
+
+[3:15:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=11750) Implementing like and dislike functionality for the problem
+- Adding conditional rendering to display UI based on like/dislike status
+- Updating user's liked problems array in the database and reflecting the changes in the UI
+
+[3:20:28](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12028) Implementing like and dislike functionality with user states
+- User can like a problem, incrementing the count and changing button color
+- User cannot like a problem twice, leading to unliking and decrementing count
+
+[3:22:40](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12160) Handling like functionality with Firebase transactions
+- Explained the complexity of handling like functionality with if-else statements
+- Discussed the use of Firebase transactions to ensure consistency in updating multiple collections
+
+[3:26:49](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12409) Read and manipulate data from Firestore transaction
+- Retrieve user and problem references and data using Firestore document method
+- Perform actions based on existing data - remove problem ID from liked problems or update likes count
+
+[3:29:10](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12550) Updating likes count in database and UI
+- Decrementing like count by one in the database for a specific problem
+- Updating the UI to reflect changes in likes count and status
+
+[3:33:42](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12822) Incrementing like count and updating UI for liked problems
+- Using transactions to update like count and add problem ID to liked problems array
+- Updating UI by setting current problem values and incrementing like count
+
+[3:35:58](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=12958) Implement loading animation based on update status
+- Set updating state to true when action is performed
+- If not updating and not reading, return from function to prevent duplicate actions
+
+[3:40:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13219) Creating and implementing the dislike functionality using async function.
+- Creating the handleDislike function as an async function.
+- Implementing logic for handling dislike functionality and attaching it to the dislike button.
+
+[3:42:21](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13341) Creating an async function to handle transactions and return user and problem documents
+- Defining the async function and parameter types
+- Including the transaction parameter and returning user and problem documents after handling transaction
+
+[3:46:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13605) Implementing like and dislike functionality with real-time updates.
+- Incrementing likes count by one and setting dislike as true, while setting like state as false.
+- Adding user reference to dislike problems array, updating problem reference, and setting updating state to false after transaction.
+
+[3:48:50](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13730) Implementing UI update on like functionality
+- Updating like count in database and UI
+- Implementing star functionality with handle star function
+
+[3:53:16](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=13996) Updating UI based on user actions in Firebase
+- Handling adding and removing problem IDs to Firebase arrays based on user interactions.
+- Implementing visual changes to the UI elements based on start and update status.
+
+[3:55:41](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14141) Handling hydration error and updating UI with Firebase data.
+- Adding and removing items from the database.
+- Ensuring correct display of solved and unsolved problems on the UI.
+
+[3:59:44](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14384) Using next/router to access query parameters and manipulate data
+- Accessing and using the router query to get the page ID (PID) and utilize it to retrieve data
+- Manipulating the order of the problems using the query parameters, destructuring, and conditional logic
+
+[4:02:00](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14520) Handle navigation between problems
+- Create logic to find and display the next problem
+- If trying to navigate to an undefined next problem, redirect to the first problem
+
+[4:06:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14796) Understanding and handling hydration errors in React
+- Hydration error occurs when rendered content on server and client don't match
+- To handle hydration errors, create a hook called hasMounted to ensure content consistency
+
+[4:08:58](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=14938) Implementing code submission and adding confetti animation
+- Using react confetti package to add confetti animation when code is submitted
+- Configuring parameters for the confetti animation such as gravity and duration
+
+[4:13:39](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15219) Setting success stage and creating functions for handling submit and on change
+- Setting success stage in the playground component and dispatching Boolean value
+- Creating handle submit function for the submit and run buttons, and initializing on change function for the code editor
+
+[4:15:57](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15357) Handling user code submission and error handling
+- Setting up the user code state and updating it with the latest value
+- Handling user authentication and displaying an error message if the user is not logged in
+
+[4:20:36](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15636) Implement function callback for testing success
+- Handler function runs tests with callback for all cases
+- Show success message and confetti if all tests pass
+
+[4:23:01](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=15781) Implementing error handling in the application
+- Checking if error message starts with 'okay' to show assertion error message
+- Displaying a custom error message for failed test cases using toast notifications
+
+[4:27:52](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16072) Updating user reference and handling hydration error for solved problems
+- Updating the document by adding PID to solved problems array for user reference
+- Handling hydration error in the problems page for better user experience
+
+[4:30:09](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16209) Implementing a solved state to show a check mark upon successful submission.
+- Create a local state variable called 'solved' and set it to true upon successful submission.
+- Check if the problem has already been solved to show the check mark.
+
+[4:34:43](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16483) Handling user authentication and local storage for user codes.
+- Setting user code based on user login status and parsing the code if available.
+- Passing dependencies and starter code based on user login status.
+
+[4:37:13](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16633) Converting user code to a function and explaining the starter function name
+- Explaining the need to convert the user code into a function and exclude certain lines from evaluation
+- Detailing the purpose of the starter function name and how it is used for each problem
+
+[4:41:53](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=16913) Handling full screen functionality and resolving errors
+- Implementing handling of full screen functionality with React
+- Resolving errors without changing the implementation
+
+[4:44:22](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17062) Implementing full screen functionality in React project
+- Listening for full screen change event and affecting multiple browsers
+- Setting state based on full screen status
+
+[4:49:08](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17348) Implementing setting model component logic with conditional rendering.
+- Setting up the settings model component with set settings functionality.
+- Explaining the components structure and logic with overlay, header, and description.
+
+[4:51:17](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17477) Implementing a drop-down menu with font size options
+- The drop-down menu can be toggled between true and false to show or hide a portion of the interface.
+- An array of font sizes from 12 pixels to 18 pixels is looped through and rendered into its own component, allowing users to select and visualize different font sizes.
+
+[4:56:05](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17765) Creating a function to handle click drop down
+- Create a function called cons to handle click drop down and specify where it will be used
+- Add functionality to open and close the drop down using event handling and setting model open field
+
+[4:58:20](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=17900) Using local storage hook in Next JS with TypeScript
+- Obtained a pre-made local storage hook from chat GPT for use in the project
+- Utilized the hook by providing key, initial value, and handling the returned values
+
+[5:02:57](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18177) Implementing dynamic font size based on user selection
+- Getting font size from local storage and setting default to 16 pixels if not found
+- Updating UI and font settings based on user-selected font size
+
+[5:05:13](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18313) Setting and fetching data from local storage and database
+- Changing and updating font size in the UI by retrieving it from local storage
+- Fetching data from the database and using it to display on the homepage
+
+[5:09:56](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18596) Implement code submission security with sandboxing
+- Security concern with user's code submission
+- Explanation of sandboxing and code execution engine
+
+[5:12:19](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=18739) Importance of sandboxing in code execution
+- Building a real application would require a code execution engine for safety
+- Demo projects like this lack a code execution engine for simplicity
+
+[5:16:45](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=19005) Update Firebase database rules for security
+- Specify rules to allow read/write for authenticated users only
+- Set rules for specific document access based on user authentication
+
+[5:19:27](https://www.youtube.com/watch?v=cSYDnjOTlQk&t=19167) Implementing read permissions for users in database rule
+- Allowing all users to read and view data, but only authenticated users can like the problem
+- Setting up database rule using match keywords for collection and dynamic values for documents

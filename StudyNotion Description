@@ -1,0 +1,36 @@
+Absolutely! Below is a simpler, ATS-friendly version of your project description and key responsibilities for "StudyNotion." This should be suitable for your resume when applying for a full-time job at Microsoft.
+
+---
+
+### StudyNotion - Ed-Tech Platform
+
+**Role: Full Stack Developer**
+
+**Technologies Used:**
+- Front-end: ReactJS, Redux, CSS, Tailwind
+- Back-end: Node.js, Express.js, MongoDB
+- Tools: VSCode, npm
+- Deployment: Vercel, Render.com, Railway.app, MongoDB Atlas
+
+**Project Description:**
+StudyNotion is an ed-tech platform designed to provide an engaging learning experience for students and a platform for instructors. Built using the MERN stack, it enables users to create, consume, and rate educational content.
+
+**Key Responsibilities:**
+- Built responsive user interfaces with ReactJS, ensuring smooth user interactions.
+- Developed backend services with Node.js and Express.js, integrating MongoDB for data storage.
+- Designed and implemented RESTful APIs for user authentication and course management.
+- Created key frontend pages like Course List, Wishlist, Cart Checkout, and User Details.
+- Managed application state using Redux for better performance.
+- Styled the platform using CSS and Tailwind for a consistent look.
+- Deployed the frontend on Vercel and backend on Render.com/Railway.app for reliable hosting.
+- Conducted testing to ensure code quality and application performance.
+- Contributed to brainstorming for future enhancements like mobile app development and machine learning recommendations.
+
+**Impact:**
+- Improved user engagement with interactive and user-friendly designs.
+- Enhanced platform performance and scalability.
+- Enabled better interaction between instructors and students.
+
+---
+
+Feel free to adjust the bullet points and details to better match your personal contributions and achievements in the project. This version should simplify the description while still highlighting your key skills and responsibilities.  
